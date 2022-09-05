@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+    halo:
+        container_name: halo
+        restart: always
+        ports:
+            - '8100:8090'
+        volumes:
+            - './.halo:/root/.halo'
+        image: halohub/halo:1.5.2
