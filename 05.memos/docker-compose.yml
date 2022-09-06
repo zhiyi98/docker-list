@@ -6,5 +6,5 @@ services:
     ports:
       - '5230:5230'
     volumes:
-      - '/root/data/docker_data/memos/.memos/:/var/opt/memos'
+      - './memos:/var/opt/memos'
     command: --mode prod --port 5230
