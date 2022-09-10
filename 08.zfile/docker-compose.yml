@@ -4,7 +4,7 @@ services:
         container_name: zfile
         restart: always
         ports:
-            - '8080:8080'    # 左边的端口可以修改，右边的端口不要修改
+            - '800:8080'    # 左边的端口可以修改，右边的端口不要修改
         volumes:
             - './db:/root/.zfile-v4/db'      # 数据库映射到当前文件夹下的db目录
             - './logs:/root/.zfile-v4/logs'  # 日志文件映射到当前文件夹下的logs目录

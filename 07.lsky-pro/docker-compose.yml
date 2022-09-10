@@ -7,7 +7,7 @@ services:
     volumes:
       - ./lsky-pro-data:/var/www/html  #映射到本地
     ports:
-      - 8100:80
+      - 700:80
     environment:
       - MYSQL_HOST=mysql
       - MYSQL_DATABASE=lsky-pro

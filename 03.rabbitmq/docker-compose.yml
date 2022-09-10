@@ -7,8 +7,8 @@ services:
     restart: always
     privileged: true
     ports:
-      - "15672:15672"
-      - "5672:5672"
+      - "300:15672"
+      - "301:5672"
     environment:
       - TZ=Asia/Shanghai
       - RABBITMQ_DEFAULT_USER=user
