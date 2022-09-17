@@ -1,0 +1,26 @@
+version: '3'
+services:
+  es01:
+    image: elasticsearch:7.14.1
+    environment:
+      - node.name=es01
+      - cluster.name=es-cluster-ai66
+      - cluster.initial_master_nodes=es01
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+
+        soft: -1
+        hard: -1
+    volumes:
+      - ./data:/usr/share/elasticsearch/data
+      - ./config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+    ports:
+      - 400:9200
+    networks:
+      - elastic
+
+networks:
+  elastic:
+    driver: bridge
