@@ -1,0 +1,15 @@
+version: '3'
+services:
+  miniocheck:
+    image: minio/minio
+    container_name: minio
+    restart: always
+    volumes:
+      - ./data:/data # 持久化地址
+    ports:
+      - "1200:9000" # 绑定端口
+    environment:
+      MINIO_ROOT_USER: user
+      MINIO_ROOT_PASSWORD: 111111
+      MINIO_PROMETHEUS_AUTH_TYPE: public
+    command: server /data
