@@ -5,8 +5,8 @@ services:
     image: caddy
     restart: always
     ports:
-      - "1600:80"
-      - "1601:443"
+      - 1600:80
+      - 1601:443
     volumes:
       - ./srv:/srv
       - ./data:/data
