@@ -1,10 +1,14 @@
 version: '3'
 services:
   oracle11g:
-    image: registry.cn-hangzhou.aliyuncs.com/helowin/oracle_11g
+    image: oracleinanutshell/oracle-xe-11g:latest
     container_name: oracle_11g
     restart: always
     ports:
       - 1500:1521
+      - 1501:5500
+    environment:
+      ORACLE_ALLOW_REMOTE: true #允许远程连接数据库
+      ORACLE_DISABLE_ASYNCH_IO: true #禁用磁盘异步IO
     volumes:
       - ./oracle_data:/home/oracle/app/oracle/oradata/mydata
