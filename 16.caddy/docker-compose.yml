@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  caddy:
+    image: caddy
+    restart: always
+    ports:
+      - "1600:80"
+      - "1601:443"
+    volumes:
+      - ./srv:/srv
+      - ./data:/data
+      - ./config:/config
+      - ./Caddyfile:/etc/caddy/Caddyfile
