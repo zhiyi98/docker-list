@@ -1,0 +1,10 @@
+version: '3'
+services:
+  oracle11g:
+    image: registry.cn-hangzhou.aliyuncs.com/helowin/oracle_11g
+    container_name: oracle_11g
+    restart: always
+    ports:
+      - 1500:1521
+    volumes:
+      - ./oracle_data:/home/oracle/app/oracle/oradata/mydata
