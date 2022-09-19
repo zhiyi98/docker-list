@@ -1,6 +1,7 @@
 # Oracle-11g
 
-> Navicat连接，端口号：1500，服务名：helowin，用户名和密码根据配置信息填写。
+> Navicat连接，端口号：1500，sid：xe，用户名和密码根据配置信息填写。
+> URL，jdbc:oracle:thin:@xx.xx.xxx.xx:1500:XE
 
 ## 参考
 
