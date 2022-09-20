@@ -14,5 +14,5 @@ services:
       - RABBITMQ_DEFAULT_USER=user
       - RABBITMQ_DEFAULT_PASS=111111
     volumes:
-      - ./data/rabbitmq/rabbitmq/:/var/lib/rabbitmq
-      - ./data/rabbitmq/rabbitmq/:/var/log/rabbitmq
+      - ./data/lib/rabbitmq/:/var/lib/rabbitmq
+      - ./data/log/rabbitmq/:/var/log/rabbitmq
