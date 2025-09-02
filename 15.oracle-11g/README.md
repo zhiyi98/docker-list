@@ -8,3 +8,9 @@
 - [oracleinanutshell/oracle-xe-11g](https://hub.docker.com/r/oracleinanutshell/oracle-xe-11g)
 - [使用Docker快速搭建Oracle实验环境（持久化）](https://blog.csdn.net/hl449006540/article/details/124993749?spm=1001.2014.3001.5506)
 - [Docker快速搭建Oracle服务](https://blog.csdn.net/m0_37613503/article/details/113837027?spm=1001.2014.3001.5506)
+
+## Oracle-11g 2
+
+```
+docker run -d -p 1521:1521 -e ORACLE_PASSWORD=<your password> -v oracle-volume:/u01/app/oracle/oradata gvenzl/oracle-xe:11
+```
